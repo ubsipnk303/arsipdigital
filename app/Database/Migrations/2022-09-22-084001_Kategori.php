@@ -15,7 +15,7 @@ class Kategori extends Migration
         $this->forge->addPrimaryKey('id');
         $this->forge->createTable('kategori');
     }
-
+  
     public function down()
     {
         $this->forge->dropTable('kategori');

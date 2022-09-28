@@ -7,7 +7,7 @@ use CodeIgniter\Database\Migration;
 class Pengguna extends Migration
 {
     public function up()
-    {
+    { 
         $this->forge->addField([
             'id' => [ 'type'=>'int', 'constraint'=>10, 'null'=>false, 'unsigned'=>true  ],
             'nama' => ['type'=>'varchar', 'constraint'=>80, 'null'=>false],

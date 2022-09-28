@@ -19,7 +19,7 @@ class Arsip extends Migration
             'created_at'    => ['type'=>'datetime', 'null'=>true],
             'updated_at'    => ['type'=>'datetime', 'null'=>true],
             'deleted_at'    => ['type'=>'datetime', 'null'=>true],
-
+ 
         ]);
         $this->forge->addPrimaryKey('id');
         $this->forge->addForeignKey('kategori_id', 'kategori', 'id', 'cascade', 'set null');
