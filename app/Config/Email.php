@@ -58,7 +58,7 @@ class Email extends BaseConfig
 
     /**
      * SMTP Password
-     *
+     * 
      * @var string
      */
     public $SMTPPass = 'jdazitvdgceoltfm';
