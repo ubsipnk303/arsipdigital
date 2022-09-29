@@ -9,12 +9,12 @@ class Email extends BaseConfig
     /**
      * @var string
      */
-    public $fromEmail;
+    public $fromEmail = "ubsi.pnk303@gmail.com";
 
     /**
      * @var string
      */
-    public $fromName;
+    public $fromName = "Sistem Arsip Digital";
 
     /**
      * @var string
@@ -26,7 +26,7 @@ class Email extends BaseConfig
      *
      * @var string
      */
-    public $userAgent = 'CodeIgniter';
+    public $userAgent = 'Sistem Arsip Digital';
 
     /**
      * The mail sending protocol: mail, sendmail, smtp
@@ -61,7 +61,7 @@ class Email extends BaseConfig
      * 
      * @var string
      */
-    public $SMTPPass = 'jdazitvdgceoltfm';
+    public $SMTPPass = 'zxhysyxgduhfiqqk';
 
     /**
      * SMTP Port
