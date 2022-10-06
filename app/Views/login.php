@@ -42,22 +42,22 @@
     </body> 
     <script>
        $(document).ready(function(){
-          $('form#form-login').submitAjax({
-            pre:()=>{
-                $('form#form-login button[type=submit]').hide();
-            },
-            pasca:()=>{
-                $('form#form-login button[type=submit]').show();
-            },
-            success: (response, status)=>{
-                var js = $.parseJSON(response);
-                alert(js.message);
-            },
-            error: (xhr, status)=>{
-                var json = $.parseJSON(  xhr.responseText ); 
-                alert(json.message);
-            }
-          });
+        //   $('form#form-login').submitAjax({
+        //     pre:()=>{
+        //         $('form#form-login button[type=submit]').hide();
+        //     },
+        //     pasca:()=>{
+        //         $('form#form-login button[type=submit]').show();
+        //     },
+        //     success: (response, status)=>{
+        //         var js = $.parseJSON(response);
+        //         alert(js.message);
+        //     },
+        //     error: (xhr, status)=>{
+        //         var json = $.parseJSON(  xhr.responseText ); 
+        //         alert(json.message);
+        //     }
+        //   });
        });
     </script>
 </html>
