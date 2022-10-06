@@ -15,7 +15,7 @@ class ArsipSeeder extends Seeder
             'ringkasan' => 'Surat Keterangan sebagai mahasiswa',
             'tgl'       => '2022-09-12',
             'kategori_id' => 1,
-            'pengguna_id' => 2
+            'pengguna_id' => 1
         ]);
     }
 }

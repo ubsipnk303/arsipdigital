@@ -4,8 +4,56 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d648ee3b65e8d352e12e15817702e7cd",
+    "content-hash": "b294a03c20bf4a937cf8c9dc03c8447a",
     "packages": [
+        {
+            "name": "agoenxz21/datatables",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/agoenxz2186/datatable.git",
+                "reference": "42af6fcf64e8b87126ff90336768a08bee22066c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/agoenxz2186/datatable/zipball/42af6fcf64e8b87126ff90336768a08bee22066c",
+                "reference": "42af6fcf64e8b87126ff90336768a08bee22066c",
+                "shasum": ""
+            },
+            "require": {
+                "codeigniter4/framework": "^4",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Agoenxz21\\Datatables\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Agung Sasongko",
+                    "email": "agoenxz21@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Library CI4 untuk menyajikan data pada jQuery DataTable",
+            "keywords": [
+                "CI4",
+                "codeigniter4",
+                "datatable",
+                "library"
+            ],
+            "support": {
+                "issues": "https://github.com/agoenxz2186/datatable/issues",
+                "source": "https://github.com/agoenxz2186/datatable/tree/v1.0.1"
+            },
+            "time": "2022-10-04T09:13:10+00:00"
+        },
         {
             "name": "codeigniter4/framework",
             "version": "v4.2.6",
@@ -2228,5 +2276,5 @@
         "php": "^7.4 || ^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
