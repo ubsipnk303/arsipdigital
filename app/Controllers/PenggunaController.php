@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use Agoenxz21\Datatables\Datatable;
-use App\Controllers\BaseController;
+use App\Controllers\BaseController; 
 use App\Models\PenggunaModel;
 use CodeIgniter\Email\Email;
 use CodeIgniter\Exceptions\PageNotFoundException;
@@ -11,6 +11,7 @@ use Config\Email as ConfigEmail;
 
 class PenggunaController extends BaseController
 {
+
     public function login(){
         $email      = $this->request->getPost('email');
         $password   = $this->request->getPost('sandi');
@@ -34,7 +35,7 @@ class PenggunaController extends BaseController
     }
     
     public function viewLogin(){
-        return view('login');
+        return view('backend/login');
     }
 
     public function lupaPassword(){
@@ -82,7 +83,7 @@ class PenggunaController extends BaseController
     }
 
     public function index(){
-        return view('Pengguna/table');
+        return view('backend/Pengguna/table');
     }
 
     public function all(){
@@ -135,6 +136,7 @@ class PenggunaController extends BaseController
         $id     = $this->request->getVar('id');
         $hasil  = $pm->delete($id);
         return $this->response->setJSON(['result' => $hasil ]);
+ 
     }
 
 }

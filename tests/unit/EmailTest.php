@@ -15,7 +15,9 @@ class EmailTest extends CIUnitTestCase{
         $email->setTo('agung.ako@bsi.ac.id');
         $email->setSubject('Testing Kirim Email');
         $email->setMessage('Hallo selamat <b>bergabung</b>');
-    
-        $this->assertTrue(  $email->send() );
+        $s = $email->send(false);
+        $em = $email->printDebugger();
+        print($em);
+        $this->assertTrue( $s  );
     }
 }

@@ -39,21 +39,32 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->group('login', function(RouteCollection $routes){
+$routes->group('login', ['filter'=>'ceklogin'],  function(RouteCollection $routes){
     $routes->get('lupa', 'PenggunaController::viewLupaPassword');
     $routes->get('/', 'PenggunaController::viewLogin');
     $routes->post('/', 'PenggunaController::login');
-    $routes->delete('/', 'PenggunaController::logout');
     $routes->patch('/', 'PenggunaController::lupaPassword');
 });
 
-$routes->group('pengguna', function(RouteCollection $routes){
+$routes->delete('login', 'PenggunaController::logout');
+
+$routes->group('pengguna', ['filter'=> 'otentikasi' ], function(RouteCollection $routes){
     $routes->get('/', 'PenggunaController::index');
     $routes->post('/', 'PenggunaController::store');
     $routes->patch('/', 'PenggunaController::update');
     $routes->delete('/', 'PenggunaController::delete');
     $routes->get('(:num)', 'PenggunaController::show/$1');
     $routes->get('all', 'PenggunaController::all');
+    
+});
+
+$routes->group('arsip', ['filter'=> 'otentikasi' ], function(RouteCollection $routes){
+    $routes->get('/', 'ArsipController::index');
+    $routes->post('/', 'ArsipController::store');
+    $routes->patch('/', 'ArsipController::update');
+    $routes->delete('/', 'ArsipController::delete');
+    $routes->get('(:num)', 'ArsipController::show/$1');
+    $routes->get('all', 'ArsipController::all');
     
 });
 

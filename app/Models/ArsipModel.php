@@ -39,4 +39,19 @@ class ArsipModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    static public function view(){
+        $subquery = (new ArsipModel())
+                        ->join('kategori', 'arsip.kategori_id=kategori.id', 'left')
+                        ->join('pengguna', 'arsip.pengguna_id=pengguna.id', 'left')
+                        ->select('arsip.*, kategori.kategori, pengguna.nama as pengguna ')
+                        ->builder();
+                                                
+        $r = db_connect()->newQuery()
+                           ->fromSubquery($subquery, 'tbl');
+        $r->table = '';
+                           
+        return $r;
+    }   
+
 }

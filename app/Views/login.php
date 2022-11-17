@@ -52,6 +52,7 @@
             success: (response, status)=>{
                 var js = $.parseJSON(response);
                 alert(js.message);
+                window.location = "<?=url_to('pengguna')?>";
             },
             error: (xhr, status)=>{
                 var json = $.parseJSON(  xhr.responseText ); 
